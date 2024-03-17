@@ -9,16 +9,16 @@
         </label>
         <nav>
             <div class="nav-container">
-                <router-link to="/">Home</router-link>
-                <router-link to="/">Mega-Sena</router-link>
-                <router-link to="/">Dupla Sena</router-link>
-                <router-link to="/">Lotofácil</router-link>
-                <router-link to="/">Quina</router-link>
-                <router-link to="/">Timemania</router-link>
-                <router-link to="/">Lotomania</router-link>
-                <router-link to="/">Dia de Sorte</router-link>
-                <router-link to="/">Super Sete</router-link>
-                <router-link to="/">Mais Milionária</router-link>
+                <router-link to="/" @click="unChecked">Home</router-link>
+                <router-link to="/" @click="unChecked">Mega-Sena</router-link>
+                <router-link to="/" @click="unChecked">Dupla Sena</router-link>
+                <router-link to="/" @click="unChecked">Lotofácil</router-link>
+                <router-link to="/" @click="unChecked">Quina</router-link>
+                <router-link to="/" @click="unChecked">Timemania</router-link>
+                <router-link to="/" @click="unChecked">Lotomania</router-link>
+                <router-link to="/" @click="unChecked">Dia de Sorte</router-link>
+                <router-link to="/" @click="unChecked">Super Sete</router-link>
+                <router-link to="/" @click="unChecked">Mais Milionária</router-link>
             </div>
         </nav>
         <div class="search">
@@ -31,6 +31,16 @@
     </header>
 </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        unChecked() {
+            document.getElementById('checkBtn').checked = false;
+        },
+    }
+}
+</script>
 
 <style scoped>
 @media screen and (max-width: 800px) {

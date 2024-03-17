@@ -4,7 +4,7 @@
       <img src="@/assets/clover.png" alt="">
       <h1>{{ data.megasena.tituloModalidade }}</h1>
       <small v-if="data.megasena.acumuladaProxSorteio">Acumulou!</small>
-      <p>Sorteio {{ data.megasena.proxConcurso }} - <strong>{{ data.dataProxSorteio }}</strong></p>
+      <p>Sorteio {{ data.megasena.proxConcurso }} - <strong>{{ data.megasena.dataProxSorteio }}</strong></p>
       <p class="value">{{ data.megasena.valorEstimadoProxConcurso }}</p>
       <div class="buttons">
         <router-link to="/" class="default-outline-light">Saiba mais</router-link>
@@ -20,7 +20,7 @@
     <article class="featured-articles">
       <p class="title">Sorteio Histórico da {{ data.lotofacil.tituloModalidade }}: Prêmio de {{ data.lotofacil.valorSorteado }} é Conquistado no Concurso {{ data.lotofacil.concurso }}</p>
       <p class="description">Uma noite memorável para os amantes da <a href="#" target="_blank">{{ data.lotofacil.tituloModalidade }}</a>! O Espaço da Sorte, localizado em São Paulo, SP, foi palco do aguardado sorteio do Concurso {{ data.lotofacil.concurso }} da {{ data.lotofacil.tituloModalidade }}, que não decepcionou os participantes ávidos por uma chance...</p>
-      <router-link to="/" class="article-btn">Continuar lendo</router-link>
+      <router-link to="/posts/lotofacil" class="article-btn">Continuar lendo</router-link>
     </article>
     <span class="divisor"></span>
     <article class="featured-articles">
@@ -70,6 +70,7 @@ export default {
     } catch (error) {
       console.error('Erro ao carregar dados:', error)
     }
+    window.scrollTo(0, 0);
   }
 }
 </script>

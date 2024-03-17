@@ -6,6 +6,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/posts/lotofacil',
+    name: 'post-lotofacil',
+    component: () => import('@/views/posts/LotoFacil.vue')
   }
 ]
 
